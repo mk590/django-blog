@@ -29,7 +29,7 @@ def home(request):
 # # what is the request.POST, request.FILES here what they do    
 
 
-# after applying the authentication 
+#  applying the authentication 
 
 # @login_required
 # def form(request):

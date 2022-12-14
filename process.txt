@@ -120,3 +120,16 @@ this shows that we were trying to access the profile page which was locked and a
 facility provided by django in the LoginView
 
 
+Binding the logged in  user and the author 
+omit the author in the forms field in forms.py
+in the view 
+    if request.method=="POST":
+        form=BlogForm(request.POST,request.FILES)
+        if form.is_valid:
+            blog=form.save(commit=False)
+            blog.author=request.user
+            blog.save()
+            return redirect('home')
+
+in the template remove the data.author 
+file:///C:/SDE/django-docs-4.1-en/topics/forms/modelforms.html#selecting-the-fields-to-use

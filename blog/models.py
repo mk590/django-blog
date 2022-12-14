@@ -21,4 +21,3 @@ class Blog(models.Model):
     
     class Meta:
         ordering=['date_created']
-    # this provides additional features to the class blog , currently we are ordering the  blog by the date of creation 

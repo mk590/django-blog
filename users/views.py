@@ -17,20 +17,12 @@ def register(request):
             
             return redirect('home')
         else:
-            # return "Error"
-            # You can not pass directly str as a django response . You must use
-            # return HttpResponse(resp)
-            # if you want to render string data as django view response. have a look django.http.HttpResponse
-
             return HttpResponse("error")
     else:
         form = UserRegisterForm()
         return render(request, 'register.html', {'data': form})
     
     
-# The view users.views.register didn't return an HttpResponse object. It returned None instead.
-# this error was happening when i tried to register the user with incorrect password and that to withou writing the else statement in the post method 
-
 @login_required
 def profile(request):
     return render(request,'profile.html')

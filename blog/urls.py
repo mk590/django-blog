@@ -11,8 +11,3 @@ urlpatterns = [
  
 ]
 
-# how it works
-# what is use of path 
-# waht is name here 
-# first represents a url and second shows a view realted to that url 
-#  path('blog/<int:pk>/',views.specific_blog,name='specific_blog'), pk is like the params in the react where the /<int:pk> kpart shows that after the slash a integer will be there which we have to pass to the view along with the request 

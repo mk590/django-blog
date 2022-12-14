@@ -128,42 +128,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL='/media/'
 
-# MEDIA_ROOT=[ BASE_DIR / 'media']  iske bina bhi kam ho raha why ? use jya hai iska 
-
-# STATICFILES_DIRS = (
-#     [ BASE_DIR / 'static']
-#     ) iske bina bhi kam ho raha why ?
-
-
-# LOGIN_REDIRECT_URL=''
-# LOGIN_REDIRECT_URL='home' 
-# NoReverseMatch at /login/
-# Reverse for '' not found. '' is not a valid view function or pattern name.
-
-# LOGIN_REDIRECT_URL='blog/home'
-# error
-# Page not found (404)
-# Request Method:	GET
-# Request URL:	http://127.0.0.1:8000/login/blog/home
-# LOGIN_REDIRECT_URL='form/'
-# LOGIN_REDIRECT_URL='/form/'
-# similar was the case with above two 
-
-# LOGIN_REDIRECT_URL='blog-home'
-# LOGIN_REDIRECT_URL='blog-form'
 
 LOGIN_REDIRECT_URL='home'
 
-# pahle wale home might be not working due to the terminal or technical issues 
-# always close and restrat the terminal ,even if auto start and open a new tab 
-# LOGIN_REDIRECT_URL='the name we have given to the path of a view , i.e what we have written in the name field of the path while writing the urls '
-
-
-# Page not found (404)
-# Request Method:	GET
-# Request URL:	http://127.0.0.1:8000/accounts/login/?next=/profile/
-# accounts/login/?next=/profile/  --> default location where the django looks for the login route 
-# but since we have made our login roiutes we need to customize it 
 
 LOGIN_URL='login'
-# login is the name of the pattern that contain our login view OR login is the valueof the name atttribute  of the path of login 

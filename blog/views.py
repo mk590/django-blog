@@ -9,9 +9,10 @@ from .forms import BlogForm
 from django.contrib.auth.decorators import login_required
 
 def home(request):
-    all_blog=Blog.objects.all()
+#     all_blogs=Blog.objects.all()
+    all_blogs=Blog.objects.filter(is_deleted=False)
     
-    return render(request,'home.html',{'data':all_blog})
+    return render(request,'home.html',{'data':all_blogs})
 
 # we define a functional view home where we create a variable all_blog which contain all theblogs 
 # since it is a function it will return something , in this case we render , click on the render  
@@ -163,8 +164,9 @@ def specific_blog_update(request,pk):
     
 def specific_blog_del(request,pk):
         particular_blog=Blog.objects.get(pk=pk)
-        particular_blog.delete()
+        # particular_blog.delete()
+        particular_blog.soft_delete()
         return redirect('home')
-    
+        
 # what is pk=pk here , is it similar to id=passed parameter 
 # also it has a issue that in the django the ids/count is not updated  

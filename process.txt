@@ -142,3 +142,13 @@ more importantly gather the resources and before starting coding read all of the
          how we will pass the addidtional data 
          for this we need to know the working of the form and how they fit with the models 
          how a data is saved from the user to the database through the forms for different models 
+
+find out the other ways to do this ???
+
+
+feedback recieved 
+
+
+
+Soft delete 
+https://dev.to/bikramjeetsingh/soft-deletes-in-django-a9j

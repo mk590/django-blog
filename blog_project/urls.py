@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 # to include users 
-from blog import views as user_views
+from users import views as user_views
     # is it imported as user_views to avoid confusion 
     
 # for the login/logout/authentication

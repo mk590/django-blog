@@ -8,15 +8,26 @@ from .forms import BlogForm
 # for authorization 
 from django.contrib.auth.decorators import login_required
 
-def home(request):
-#     all_blogs=Blog.objects.all()
-    all_blogs=Blog.objects.filter(is_deleted=False)
-    
-    return render(request,'home.html',{'data':all_blogs})
+
+# before soft delete 
+# def home(request):
+#     all_blogs=Blog.objects.all()  
+#     return render(request,'home.html',{'data':all_blogs})
 
 # we define a functional view home where we create a variable all_blog which contain all theblogs 
 # since it is a function it will return something , in this case we render , click on the render  
 # here request is the url 
+
+# after soft delete 
+def home(request):
+#     all_blogs=Blog.objects.filter(is_deleted=False)
+#     all_blogs=Blog.all_objects.all()
+    all_blogs=Blog.objects.all()
+    
+    return render(request,'home.html',{'data':all_blogs})
+
+
+
 
 # before applying the authentication
 # def form(request):

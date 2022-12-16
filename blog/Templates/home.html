@@ -69,8 +69,8 @@
                                 <p class="card-text"> {{blog.content}} </p>
                                 {% comment %} <p class="card-text"> {{user.username}} </p> {% endcomment %}
                                  <a class="btn btn-primary" href = "{% url 'specific_blog_view' blog.pk %}">View</a>
-                                 {% comment %} {% if user.is_authenticated %} {% endcomment %}
-                                 {% comment %} {% if user.username == blog.author %} {% endcomment %}
+                                 {% comment %} {% if user.is_authenticated %} no need of this as the below if will automatically handle this {% endcomment %}
+                                 {% comment %} {% if user.username == blog.author %}  {% endcomment %}
                                  {% comment %} {% if user == blog.author or user == admin %} {% endcomment %}
                                  {% if user == blog.author or user.is_superuser %}
                                  <a class="btn btn-primary" href = "{% url 'specific_blog_update' blog.pk %}">Update</a>

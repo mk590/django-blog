@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
-from .models import *
-from .forms import *
+# from .models import *
+# from .forms import *
+from .models import Blog
+from .forms import BlogForm
 
 
 # for authorization 
@@ -148,9 +150,9 @@ def specific_blog_view(request,pk):
 def specific_blog_update(request,pk):
         if request.method == "POST":
             particularBlog = Blog.objects.get(pk= pk)
-            update = BlogForm(request.POST, request.FILES ,instance = particularBlog)
-            if update.is_valid():
-                update.save()
+            updated_blog = BlogForm(request.POST, request.FILES ,instance = particularBlog)
+            if updated_blog.is_valid():
+                updated_blog.save()
                 return redirect('home')
             
         particularBlog = Blog.objects.get(pk= pk)

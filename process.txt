@@ -120,7 +120,7 @@ this shows that we were trying to access the profile page which was locked and a
 facility provided by django in the LoginView
 
 
-Binding the logged in  user and the author 
+                                Binding the logged in  user and the author 
 omit the author in the forms field in forms.py
 in the view 
     if request.method=="POST":
@@ -133,3 +133,12 @@ in the view
 
 in the template remove the data.author 
 file:///C:/SDE/django-docs-4.1-en/topics/forms/modelforms.html#selecting-the-fields-to-use
+
+ask the correct question what, how , why  when dealing with a new process 
+more importantly gather the resources and before starting coding read all of them and have a pen and paper with you 
+ what we need to do -> author +user login
+ how 
+    remove the author field from  the  form and then pass the additional data 
+         how we will pass the addidtional data 
+         for this we need to know the working of the form and how they fit with the models 
+         how a data is saved from the user to the database through the forms for different models 

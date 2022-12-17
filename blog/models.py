@@ -29,7 +29,7 @@ class Tags(models.Model):
     def __str__(self):
         return self.category
     
-class Blog(models.Model):
+class Blog(SoftDelete):
     title=models.CharField(max_length=200)
     tags=models.ManyToManyField(Tags)
     description=models.CharField(max_length=500)

@@ -8,6 +8,8 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
     all_blog=Blog.objects.all()
+#     all_blog=Blog.all_objects.all()  
+# this one isto show all the objects including the soft deleted ones
     
     return render(request,'home.html',{'data':all_blog})
 

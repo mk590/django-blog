@@ -49,7 +49,7 @@ def specific_blog_update(request,pk):
     
 def specific_blog_del(request,pk):
         particular_blog=Blog.objects.get(pk=pk)
-        particular_blog.delete()
+        particular_blog.soft_delete()
         return redirect('home')
 
 

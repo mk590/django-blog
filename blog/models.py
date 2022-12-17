@@ -1,7 +1,28 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from django.utils.timezone import now
+class SoftDeleteManager(models.Manager):
 
+    def get_queryset(self):
+        return super().get_queryset().filter(deleted_at__isnull=True)
+    
+class SoftDelete(models.Model):
+
+    deleted_at = models.DateTimeField(null=True, default=None)
+    objects = SoftDeleteManager()
+    all_objects = models.Manager()
+
+    def soft_delete(self):
+        self.deleted_at = now()
+        self.save()
+
+    def restore(self):
+        self.deleted_at = None
+        self.save()
+
+    class Meta:
+        abstract = True
 
 class Tags(models.Model):
     category=models.CharField(max_length=100)

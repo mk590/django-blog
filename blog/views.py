@@ -36,9 +36,9 @@ def specific_blog_view(request,pk):
 def specific_blog_update(request,pk):
         if request.method == "POST":
             particularBlog = Blog.objects.get(pk= pk)
-            update = BlogForm(request.POST, request.FILES ,instance = particularBlog)
-            if update.is_valid():
-                update.save()
+            updated_blog = BlogForm(request.POST, request.FILES ,instance = particularBlog)
+            if updated_blog.is_valid():
+                updated_blog.save()
                 return redirect('home')
             
         particularBlog = Blog.objects.get(pk= pk)
@@ -64,12 +64,7 @@ def register(request):
     if request.method=='POST':
         user_form=UserRegisterForm(request.POST)
         if user_form.is_valid():
-            user_form.save()
-            
-            username = user_form.cleaned_data.get('username')
-            messages.success(request, f'Account created for {username}!')
-            # these two lines are doing nothing the 
-            
+            user_form.save()          
             return redirect('home')
         else:
             return HttpResponse("error")

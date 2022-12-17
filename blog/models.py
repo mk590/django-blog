@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-# this will import a model named as user present in django's contrib.auth part
-# what does contrib.auth ?  --> it also a model which is made of many classes and python objects 
-# in short when we are importing user we are importing a model which has a username and password field as compulsion and many other fields and since this is inside of the auth model it is part of auth system so it is useful in authentication  
+
 
 
 class Tags(models.Model):

@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,HttpResponse
 from .models import *
 from .forms import *
 
@@ -28,20 +28,11 @@ def form(request):
         return render(request,'form.html',{'data':form})
 
 
-
-
-
-
-
-
-
 def specific_blog_view(request,pk):
         particular_blog=Blog.objects.get(pk=pk)
         
         return render(request,'view_blog.html',{'data':particular_blog})
   
-  
-# how this update of blog works eachline explanation   
 def specific_blog_update(request,pk):
         if request.method == "POST":
             particularBlog = Blog.objects.get(pk= pk)
@@ -60,6 +51,33 @@ def specific_blog_del(request,pk):
         particular_blog=Blog.objects.get(pk=pk)
         particular_blog.delete()
         return redirect('home')
+
+
+
+from django.contrib import messages
+from .forms import UserRegisterForm
+
+# for authorization 
+from django.contrib.auth.decorators import login_required
+
+def register(request):
+    if request.method=='POST':
+        user_form=UserRegisterForm(request.POST)
+        if user_form.is_valid():
+            user_form.save()
+            
+            username = user_form.cleaned_data.get('username')
+            messages.success(request, f'Account created for {username}!')
+            # these two lines are doing nothing the 
+            
+            return redirect('home')
+        else:
+            return HttpResponse("error")
+    else:
+        form = UserRegisterForm()
+        return render(request, 'register.html', {'data': form})
     
-# what is pk=pk here , is it similar to id=passed parameter 
-# also it has a issue that in the django the ids/count is not updated  
+    
+@login_required
+def profile(request):
+    return render(request,'profile.html')

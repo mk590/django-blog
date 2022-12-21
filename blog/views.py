@@ -121,6 +121,7 @@ def home(request):
         # initial_dict = {"author":User.username,"title":"title"}    
         # initial_dict = {"author":User.username,"title":User.username}    
         # <django.db.models.query_utils.DeferredAttribute object at 0x0000022E57A6D7E0>
+        # this error was coming bcz i was passing the User.username , instead of request.user 
         # initial_dict = {"author":User.username,"title":request.user}    
         # initial_dict = {"author":request.user,"title":"title"}    
 

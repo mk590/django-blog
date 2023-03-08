@@ -2,7 +2,7 @@ settings add app
 write models 
 create form 
 create templates
-    in the templates while redirecting we don't have to write the urls , instead we havel to write the view name 
+    in the templates while redirecting we don't have to write the urls , instead we havel to write the name given to the path that contain the url  
 
 in the main urls add the url destination of the app 
 there always first import the include from the django urls , otherwise the facility of the vs code import a different kind of the include which will crate error 

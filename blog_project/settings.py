@@ -75,12 +75,12 @@ WSGI_APPLICATION = 'blog_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -167,3 +167,10 @@ LOGIN_REDIRECT_URL='home'
 
 LOGIN_URL='login'
 # login is the name of the pattern that contain our login view OR login is the valueof the name atttribute  of the path of login 
+
+
+# vrcel deployment
+ALLOWED_HOSTS = ['.vercel.app'] # Allow *.vercel.app
+
+# commenting out the databases for this 
+DATABASES = {}

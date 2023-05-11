@@ -162,3 +162,6 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
 
 
 The build result from "@ardnt/vercel-python-wsgi" is missing the "output" property.
+
+
+ "GET /favicon.ico HTTP/1.1" 404 3663

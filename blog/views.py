@@ -182,3 +182,8 @@ def specific_blog_del(request,pk):
         
 # what is pk=pk here , is it similar to id=passed parameter 
 # also it has a issue that in the django the ids/count is not updated  
+
+
+from django.http import HttpResponse
+def favicon(request):
+    return HttpResponse(status=204)

@@ -36,7 +36,7 @@ Windows: Download the version for your laptop via https://www.python.org/downloa
 
 # Run
 
-1. Clone or download repositiory: https://github.com/mk590/django-blog/new/14dec
+1. Clone or download repositiory: https://github.com/mk590/django-blog
 2. In source folder, run python manage.py runserver to start program, optionally, run with --help argument to see other runtime options.
 
 # ThankYou!

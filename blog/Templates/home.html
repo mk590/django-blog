@@ -36,8 +36,6 @@
                     <br/>
                 </button> 
                 {% if user.is_authenticated %}
-                {% comment %} why the u of the user is small it should be capital {% endcomment %}
-                <span>Logged in as {{user.username}}</span>
                 <button type="submit" class="btn btn-secondary" style="float: right;">
                    <a href="{% url 'logout' %}" style="color:white"> Logout</a>
                    <br/>
@@ -53,6 +51,9 @@
                 </button> 
                 {%endif%}
             </h1>
+           {% if user.is_authenticated %}
+           <div style="text-align:center;color: blue;"><h3>Welcome {{user.username}}</h3></div>
+            {%endif%}
             <div class="row mt-5">
                 <div class="owl-carousel owl-theme" data-blog>
                     <!-- slides -->

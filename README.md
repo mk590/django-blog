@@ -8,6 +8,14 @@ Start by building
 1. User Authentication - which make sure people can SignIn, create accountes ,sign out , so on and so forth
 2. create posts- allow people to create posts, so they can post something on there blog or see there all blogs at one place
 3. allow functionality like Likes, Comments and kind of all the other things you would assume a blog app has.
+4. functionalilty to upload the media images
+
+# Demo Video
+
+    https://github.com/mk590/django-blog/assets/84888245/22218947-2a57-4253-b5c2-c97ded5adafd
+
+
+
 
 
 # PRE-REQUISITES

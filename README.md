@@ -12,7 +12,10 @@ Start by building
 
 # Demo Video
 
-    https://github.com/mk590/django-blog/assets/84888245/22218947-2a57-4253-b5c2-c97ded5adafd
+
+
+https://github.com/mk590/django-blog/assets/84888245/a1cb393b-6190-45c4-8af1-842daf6aced1
+
 
 
 
